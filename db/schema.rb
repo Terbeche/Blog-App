@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_14_080033) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.bigint "author_id", null: false
+    t.bigint "author_id"
     t.bigint "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -34,25 +34,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_14_080033) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.bigint "author_id", null: false
-    t.string "title", null: false
+    t.bigint "author_id"
+    t.string "title"
     t.text "text"
     t.integer "comments_counter"
     t.integer "likes_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_posts_on_author_id"
-    t.index ["title"], name: "index_posts_on_title"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.string "photo"
     t.text "bio"
     t.integer "posts_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_users_on_name"
   end
 
   add_foreign_key "comments", "posts"
