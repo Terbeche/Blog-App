@@ -13,8 +13,6 @@ class Post < ApplicationRecord
     comments.order(updated_at: :desc).last(5)
   end
 
-  private
-
   def update_post_counter
     author.increment!(:posts_counter)
   end
