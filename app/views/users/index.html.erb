@@ -1,10 +1,14 @@
 <h1>Here is the list of users</h1>
  <% @users.each do |user| %>
+    <div class= "user-card">
     
     <%= image_tag(user.photo, :size => "260x180") %>
-
+<div class= "user-info">
     <%= user.name %>
-    <span>Numeber of posts: </span><%= user.posts_counter %>
+    
+    <span class="counter-card">Numeber of posts: <%= user.posts_counter %></span>
+</div>
+</div>
 
 <br>
      <% end %>

@@ -2,17 +2,27 @@
 
 <%= render "users/user_card" %>
 <% @posts.each do |post| %>
+
+    <div class="post-card">
     <br>
 <span><%= post.title %></span>
 <br>
 <p><%= post.text %></p>
-<span>Comments, </span><%= post.comments_counter %>
-<span>Likes</span><%= post.likes_counter %>
+<span class="counter-card">
+<span>Comments: </span><%= post.comments_counter %>
+<span>, Likes: </span><%= post.likes_counter %>
+</span>
 <br>
+</div>
+<div class="comment-card">
 <% post.comments.each do |comment| %>
+    
     <span><%= comment.author.name %></span>
 
     <span><%= comment.text%></span>
     <br>
+    
     <% end %>
-<% end %>
+    </div>
+    <% end %>
+    <button>Pagination</button>
