@@ -5,7 +5,8 @@
 
     <div class="post-card">
     <br>
-<span><%= post.title %></span>
+<%= link_to  post.title, user_post_path(@user, post.id)  %>
+
 <br>
 <p><%= post.text %></p>
 <span class="counter-card">
@@ -15,7 +16,7 @@
 <br>
 </div>
 <div class="comment-card">
-<% post.comments.each do |comment| %>
+<% post.recent_five_comments.each do |comment| %>
     
     <span><%= comment.author.name %></span>
 

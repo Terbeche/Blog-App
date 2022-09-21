@@ -48,3 +48,8 @@ span {
   margin: 1rem;
   margin-bottom: 3rem;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}

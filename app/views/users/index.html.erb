@@ -4,8 +4,9 @@
     
     <%= image_tag(user.photo, :size => "260x180") %>
 <div class= "user-info">
-    <%= user.name %>
-    
+
+    <%= link_to  user.name, user_path(user.id)  %>
+
     <span class="counter-card">Number of posts: <%= user.posts_counter %></span>
 </div>
 </div>

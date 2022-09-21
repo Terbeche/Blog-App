@@ -6,10 +6,11 @@
 <p><%= @user.bio %></p>
 </div>
 
-<% @user.posts.each do |post| %>
+<% @user.recent_three_posts.each do |post| %>
     <div class="post-card">
     <br>
-<span><%= post.title %></span>
+
+<%= link_to  post.title, user_post_path(@user, post.id)  %>
 
 <p><%= post.text %></p>
 <span class="counter-card">
@@ -20,4 +21,5 @@
 </div>
 <% end %>
 
-<button>See all posts</button>
+<button><%= link_to  "See all posts", user_posts_path(@user)  %></button>
+
