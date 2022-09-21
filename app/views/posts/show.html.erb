@@ -1,1 +1,15 @@
 <h1>Here is a specific post for a given user<h1>
+<span><%= @post.title  %></span><span> by </span><span><%= @post.author.name  %></span>
+<br>
+<span>Comments: </span><%= @post.comments_counter %>
+<span>, Likes: </span><%= @post.likes_counter %>
+<br>
+<p><%= @post.text %></p>
+
+
+<% @post.comments.each do |comment| %>
+    <span><%= comment.author.name %>:</span>
+    <span><%= comment.text%></span>
+    <br>
+<% end %>
+

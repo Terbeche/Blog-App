@@ -1,1 +1,22 @@
 <h2>Here is a list of posts for a given user<h2>
+<%= image_tag(@user.photo, :size => "260x180") %>
+
+    <%= @user.name %>
+    <span>Numeber of posts: </span><%= @user.posts_counter %>
+    
+<br>
+<% @posts.each do |post| %>
+    <br>
+<span><%= post.title %></span>
+<br>
+<p><%= post.text %></p>
+<span>Comments, </span><%= post.comments_counter %>
+<span>Likes</span><%= post.likes_counter %>
+<br>
+<% post.comments.each do |comment| %>
+    <span><%= comment.author.name %></span>
+
+    <span><%= comment.text%></span>
+    <br>
+    <% end %>
+<% end %>
