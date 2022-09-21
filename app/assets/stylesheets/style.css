@@ -1,0 +1,55 @@
+.user-card {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.user-info {
+  border: 0.2rem solid black;
+  width: 80%;
+  display: flex;
+  gap: 5rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.bio-card {
+  border: 0.2rem solid black;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+button {
+  margin-left: 45%;
+  padding: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+.post-card {
+  border: 0.2rem solid black;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.counter-card {
+  float: right;
+}
+
+.comment-card {
+  border: 0.2rem solid black;
+  padding: 2rem;
+  margin: 1rem;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

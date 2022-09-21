@@ -1,1 +1,29 @@
 <h2>Here is a list of posts for a given user<h2>
+
+<%= render "users/user_card" %>
+<% @posts.each do |post| %>
+
+    <div class="post-card">
+    <br>
+<%= link_to  post.title, user_post_path(@user, post.id)  %>
+
+<br>
+<p><%= post.text %></p>
+<span class="counter-card">
+<span>Comments: </span><%= post.comments_counter %>
+<span>, Likes: </span><%= post.likes_counter %>
+</span>
+<br>
+</div>
+<div class="comment-card">
+<% post.recent_five_comments.each do |comment| %>
+    
+    <span><%= comment.author.name %></span>
+
+    <span><%= comment.text%></span>
+    <br>
+    
+    <% end %>
+    </div>
+    <% end %>
+    <button>Pagination</button>
