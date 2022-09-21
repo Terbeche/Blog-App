@@ -1,10 +1,6 @@
 <h1>Here is a specific user<h1>
-<%= image_tag(@user.photo, :size => "260x180") %>
 
-    <%= @user.name %>
-    <span>Numeber of posts: </span><%= @user.posts_counter %>
-    
-<br>
+<%= render "user_card" %>
 <%= @user.bio %>
 
 <% @user.posts.each do |post| %>
