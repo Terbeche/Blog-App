@@ -21,10 +21,10 @@ class PostsController < ApplicationController
       format.html do
         if post.save
           flash[:success] = 'Post saved successfully'
-          redirect_to mc_questions_url
+          redirect_to post_url
         else
           flash.now[:error] = 'Error: Post could not be saved'
-          render :new, locals: { post: }
+          render :new, locals: { post: post}
         end
       end
     end
