@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   def new
     post = Post.new
     respond_to do |format|
-      format.html { render :new, locals: { post: post } }
+      format.html { render :new, locals: { post: } }
     end
   end
 
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
           redirect_to post_url
         else
           flash.now[:error] = 'Error: Post could not be saved'
-          render :new, locals: { post: post}
+          render :new, locals: { post: }
         end
       end
     end

@@ -1,12 +1,10 @@
 class CommentsController < ApplicationController
-
   def new
     comment = Comment.new
     respond_to do |format|
-      format.html { render :new, locals: { comment: comment } }
+      format.html { render :new, locals: { comment: } }
     end
   end
-
 
   def create
     comment = Comment.new(params.require(:post).permit(:text))
@@ -17,7 +15,7 @@ class CommentsController < ApplicationController
           redirect_to comment_url
         else
           flash.now[:error] = 'Error: Comment could not be saved'
-          render :new, locals: { comment: comment}
+          render :new, locals: { comment: }
         end
       end
     end
