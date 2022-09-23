@@ -18,4 +18,4 @@
 
 </div>
 
-<%= link_to  "Create new Comment", new_post_comment_path(@post)  %>
+<%= link_to  "Create new Comment", new_user_post_comment_path(@post.author, @post)  %>

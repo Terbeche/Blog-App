@@ -5,6 +5,10 @@ class PostsController < ApplicationController
   end
 
   def show
+    puts "***********"
+    puts params[:user_id]
+    puts params[:post_id]
+    puts "***********"
     @post = Post.find(params[:id])
   end
 
@@ -16,21 +20,22 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:author_id, :title, :text)
- 
+    params
+      .require(:post)
+      .permit(:title, :text)
+      .merge(author: current_user, comments_counter: 0, likes_counter: 0)
   end
 
   def create
     @post = Post.new(post_params)
-    @post.author = current_user
     respond_to do |format|
       format.html do
         if @post.save
           flash[:success] = 'Post saved successfully'
-          redirect_to user_posts_path(current_user)
+          redirect_to user_post_path(current_user, @post)
         else
           flash.now[:error] = 'Error: Post could not be saved'
-          redirect_to new_user_post_path
+          redirect_to new_user_post_path(current_user)
         end
       end
     end
