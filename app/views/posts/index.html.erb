@@ -1,11 +1,11 @@
-<h2>Here is a list of posts for a given user<h2>
+<h2 class="descriptive-title">Here is a list of posts for a given user<h2>
 
 <%= render "users/user_card" %>
 <% @posts.each do |post| %>
 
     <div class="post-card">
     <br>
-<%= link_to  post.title, user_post_path(@user, post.id)  %>
+<%= link_to  post.title, user_post_path(@user, post)  %>
 
 <br>
 <p><%= post.text %></p>
@@ -26,4 +26,6 @@
     <% end %>
     </div>
     <% end %>
+    <%= link_to  "Create new Post", new_user_post_path(@user)  %>
+
     <button>Pagination</button>

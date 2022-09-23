@@ -1,4 +1,4 @@
-<h1>Here is a specific user<h1>
+<h1 class="descriptive-title">Here is a specific user<h1>
 
 <%= render "user_card" %>
 <div class="bio-card">
@@ -9,8 +9,7 @@
 <% @user.recent_three_posts.each do |post| %>
     <div class="post-card">
     <br>
-
-<%= link_to  post.title, user_post_path(@user, post.id)  %>
+    <%= link_to  post.title, user_post_path(@user, post)  %>
 
 <p><%= post.text %></p>
 <span class="counter-card">
@@ -20,6 +19,7 @@
 </span>
 </div>
 <% end %>
+<%= link_to  "Create new Post", new_user_post_path(@user)  %>
 
 <button><%= link_to  "See all posts", user_posts_path(@user)  %></button>
 
