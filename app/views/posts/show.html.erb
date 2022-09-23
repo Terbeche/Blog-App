@@ -1,4 +1,4 @@
-<h1>Here is a specific post for a given user<h1>
+<h1 class="descriptive-title">Here is a specific post for a given user<h1>
 <div class="post-card">
 <span><%= @post.title  %></span><span> by </span><span><%= @post.author.name  %></span>
 <br>
@@ -18,5 +18,9 @@
 
 </div>
 
-<%= link_to  "Create new Comment", new_user_post_comment_path(@post.author, @post)  %>
+
+<div class="like-div">
+<button><%= link_to  "Create new Comment", new_user_post_comment_path(@post.author, @post)  %></button>
 <%= render partial: 'likes/form' %>
+
+</div>

@@ -1,9 +1,9 @@
 class LikesController < ApplicationController
-
   def like_params
     params
       .require(:like)
-      .merge(author: current_user, post_id: params.require(:post_id))
+      .permit(:post_id)
+      .merge(author: current_user)
   end
 
   def create
@@ -14,9 +14,11 @@ class LikesController < ApplicationController
           redirect_to user_post_path(current_user, @like.post)
         else
           flash.now[:error] = 'Error: Like could not be saved'
-          render :new, locals: { like: }
+          redirect_to user_post_path(current_user)
         end
       end
     end
   end
+
+  helper_method :create
 end
