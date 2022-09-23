@@ -5,10 +5,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    puts "***********"
+    puts '***********'
     puts params[:user_id]
     puts params[:post_id]
-    puts "***********"
+    puts '***********'
     @post = Post.find(params[:id])
   end
 

@@ -1,0 +1,5 @@
+<%= form_with model: @like, url: user_post_path, method: :post,  local: true, scope: :post do |form| %>
+    <button type="submit">
+        Like 
+    </button>
+  <% end %>

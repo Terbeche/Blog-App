@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
       .require(:comment)
       .permit(:text)
       .merge(author: current_user, post_id: params.require(:post_id))
-
   end
 
   def create
