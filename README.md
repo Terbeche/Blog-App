@@ -13,6 +13,12 @@
 - GitHub: [@githubhandle](https://github.com/Terbeche)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mustapha-terbeche/)
 
+👤 **Silvia Tofana**
+
+- GitHub: [@silviatofana](https://github.com/silviatofana)
+- LinkedIn: [@silviatofana](https://www.linkedin.com/in/silviatofana)
+- Twitter: [@silviatofana](https://twitter.com/SilviaTofana)
+
 ## Setup
 
 If you wish to run the project locally, please do the following:
