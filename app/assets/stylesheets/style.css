@@ -74,10 +74,24 @@ input {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-left: 5rem;
-  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .descriptive-title {
   margin-left: 5rem;
+}
+
+.page-title {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 3rem;
+  background-color: aqua;
+  padding: 1rem;
 }
