@@ -81,7 +81,7 @@ input {
   margin-left: 5rem;
 }
 
-.page-title{
+.page-title {
   text-align: center;
 }
 
@@ -89,9 +89,9 @@ li {
   list-style-type: none;
 }
 
-.nav-bar{
+.nav-bar {
   display: flex;
-gap:  3rem;
+  gap: 3rem;
   background-color: aqua;
-padding: 1rem;
+  padding: 1rem;
 }
