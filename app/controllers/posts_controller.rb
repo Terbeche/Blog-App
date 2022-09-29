@@ -39,17 +39,15 @@ class PostsController < ApplicationController
     end
   end
 
-
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
     @user = current_user
     @user.posts_counter -= 1
     @user.save
-   
+
     respond_to do |format|
       format.html { redirect_to(user_posts_url) }
-
     end
   end
 end

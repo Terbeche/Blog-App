@@ -36,7 +36,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     @post.comments_counter -= 1
     @post.save
-      
+
     respond_to do |format|
       format.html { redirect_to(user_posts_url) }
     end
