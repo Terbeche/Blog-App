@@ -1,6 +1,11 @@
 # Blog-App
 
 > This is a an Blog app build using Ruby on Rails Where you can sign up, create your own posts and comment and like other users posts
+
+## Live Demo
+
+[Live Demo Link](https://blog-app-productions.up.railway.app/)
+
 ## Built With
 
 - ![](https://img.shields.io/badge/Github-blueviolet)
